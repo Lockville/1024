@@ -124,7 +124,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
   this.bestContainer.textContent = bestScore;
 };
 
-var lockville = 'Kattints <a href="http://index.hu" target="_blank">ide</a>'
+var lockville = 'Na menj <a href="http://index.hu" target="_blank">INDEXet</a> olvasni Szoszo!'
 //$(document).ready(function(){
 //  $('p').append('Kattints <a href="http://index.hu" target="_blank">ide</a>')
 //})
@@ -135,7 +135,7 @@ HTMLActuator.prototype.message = function (won) {
 
   this.messageContainer.classList.add(type);
  // this.messageContainer.getElementsByTagName("p")[0].textContent = message;
- $('p').append(message);
+ $('.message').append(message);
 };
 
 HTMLActuator.prototype.clearMessage = function () {
