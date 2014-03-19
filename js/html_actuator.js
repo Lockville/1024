@@ -124,12 +124,18 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
   this.bestContainer.textContent = bestScore;
 };
 
+var lockville = 'Kattints <a href="http://index.hu" target="_blank">ide</a>'
+//$(document).ready(function(){
+//  $('p').append('Kattints <a href="http://index.hu" target="_blank">ide</a>')
+//})
+
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!";
+  var message = won ? lockville : "Game over!";
 
   this.messageContainer.classList.add(type);
-  this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+ // this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+ $('p').append(message);
 };
 
 HTMLActuator.prototype.clearMessage = function () {
