@@ -5,7 +5,8 @@
 @basecolor-lockville: #edb300;
 @basecolor: #9b59b6;
 @basecolor-lighten: lighten(@basecolor, 35%);
-@bgcolor: #2c3e50;
+@bgcolor: #34495e;
+@fontcolor: desaturate(@bgcolor, 15%);
 
 
 
@@ -29,6 +30,13 @@
 
 .tile-darken-sat(@increment) {
 	background-color: saturate(darken(@basecolor, @increment), @increment);
+}
+
+//GENERAL STYLING
+
+html, body {
+	color: @fontcolor;
+	background-color: lighten(@bgcolor,68%);
 }
 
 
