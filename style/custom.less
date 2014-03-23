@@ -1,25 +1,24 @@
+@import "../style/main.css";
 
-// Variables
+// VARIABLES
 
 @basecolor-lockville: #edb300;
 @basecolor: #9b59b6;
 @basecolor-lighten: lighten(@basecolor, 35%);
+@bgcolor: #2c3e50;
 
-// Mixins
 
-// Gradient mixin
 
-.repeating-linear(@degree; @color1; @color2; @stripewidth) {
-	background: repeating-linear-gradient(@degree, @color1, @color1 @stripewidth, @color2 @stripewidth, @color2 @stripewidth*2);
-}
+// MIXINS
 
-//Glow mixin
 
-.glow(@color: @basecolor; @x: 0px; @y: 0px; @rad: 30px; @size: 3px) {
+// Glow mixin
+
+.glow(@color: @basecolor-lighten; @x: 0px; @y: 0px; @rad: 30px; @size: 3px) {
 	box-shadow: @x @y @rad @size @color;
 }
 
-// tile backgrounds
+// Tile backgrounds
 .tile-lighten(@increment) {
 	background-color: lighten(@basecolor, @increment);
 }
@@ -32,10 +31,18 @@
 	background-color: saturate(darken(@basecolor, @increment), @increment);
 }
 
-//Grid styling
+
+//SCORES STYLING
+
+.scores-container div {
+	background-color: @bgcolor;
+}
+
+
+//GRID STYLING
 
 .game-container {
-	background-color:#2c3e50;
+	background-color: @bgcolor;
 }
 
 .tile {
