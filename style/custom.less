@@ -1,0 +1,78 @@
+
+// Variables
+
+@basecolor-lockville: #edb300;
+@basecolor: #9b59b6;
+@basecolor-lighten: lighten(@basecolor, 35%);
+
+// Mixins
+
+// Gradient mixin
+
+.repeating-linear(@degree; @color1; @color2; @stripewidth) {
+	background: repeating-linear-gradient(@degree, @color1, @color1 @stripewidth, @color2 @stripewidth, @color2 @stripewidth*2);
+}
+
+//Glow mixin
+
+.glow(@color: @basecolor; @x: 0px; @y: 0px; @rad: 30px; @size: 3px) {
+	box-shadow: @x @y @rad @size @color;
+}
+
+// tile backgrounds
+.tile-lighten(@increment) {
+	background-color: lighten(@basecolor, @increment);
+}
+
+.tile-darken(@increment) {
+	background-color: darken(@basecolor, @increment);
+}
+
+.tile-darken-sat(@increment) {
+	background-color: saturate(darken(@basecolor, @increment), @increment);
+}
+
+//Grid styling
+
+.game-container {
+	background-color:#2c3e50;
+}
+
+.tile {
+	&.tile-2 .tile-inner {
+		.tile-lighten(50%) !important;
+	}
+	&.tile-4 .tile-inner {
+		.tile-lighten(40%) !important;
+	}
+	&.tile-8 .tile-inner {
+		.tile-lighten(30%) !important;
+		color: inherit;
+	}
+	&.tile-16 .tile-inner {
+		.tile-lighten(20%) !important;
+	}
+	&.tile-32 .tile-inner {
+		.tile-lighten(10%) !important;
+	}
+	&.tile-64 .tile-inner {
+		.tile-darken(0%) !important;
+	}
+	&.tile-128 .tile-inner {
+		.tile-darken(3%) !important;
+		box-shadow: none !important;
+	}
+	&.tile-256 .tile-inner {
+		.tile-darken(6%) !important;
+		box-shadow: none !important;
+	}
+	&.tile-512 .tile-inner {
+		.tile-darken-sat(9%) !important;
+		box-shadow: none !important;
+	}
+	&.tile-1024 .tile-inner {
+		background-color: saturate(@basecolor, 20%);
+		.glow;		
+	}
+
+}
