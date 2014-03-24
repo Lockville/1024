@@ -1,0 +1,228 @@
+@import url('fonts/clear-sans.css');
+@import "main.css";
+@import "buttons.css";
+@import "forms.css";
+
+
+// VARIABLES
+
+@basecolor-lockville: #edb300;
+@basecolor: #9b59b6;
+@basecolor-lighten: lighten(@basecolor, 35%);
+@bgcolor: #34495e;
+@fontcolor: desaturate(@bgcolor, 15%);
+
+
+
+// MIXINS
+
+.font {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.glow(@color: @basecolor-lighten; @x: 0px; @y: 0px; @rad: 30px; @size: 3px) {
+	box-shadow: @x @y @rad @size @color;
+}
+
+.tile-lighten(@increment) {
+	background-color: lighten(@basecolor, @increment);
+}
+
+.tile-darken(@increment) {
+	background-color: darken(@basecolor, @increment);
+}
+
+.tile-darken-sat(@increment) {
+	background-color: saturate(darken(@basecolor, @increment), @increment);
+}
+
+
+
+
+// PURE CSS STYLE OVERRIDES
+
+button {
+	font: inherit;
+}
+
+.pure-button {
+	font-size: 18px;
+	.font;
+	font-weight: bold;
+	@media screen and (max-width: 520px) {
+		font-size: 12px;
+		padding: .6em 1em;
+	}
+}
+
+.pure-button-primary {
+	background-color: @bgcolor !important;
+	&:hover, &:focus, &:active {
+		background-color: darken(@bgcolor, 2%) !important;
+	}
+}
+
+
+
+
+//GENERAL STYLING
+
+html, body {
+	color: @fontcolor;
+	background-color: lighten(@bgcolor,68%);
+}
+
+.visible-xs {
+	display:none;
+	@media screen and (max-width: 520px) {
+		display: inline;
+	}
+}
+
+
+
+//STYLING PAGE ELEMENTS
+
+//Header
+
+h1.title {
+	float: none;
+	text-align: center;
+}
+small {
+	font-size: 75%;
+}
+
+
+//Scores
+
+.scores-container div {
+	background-color: @bgcolor;
+}
+
+//Message
+
+.game-container {
+	.message {
+		h3 {
+			font-size: 32px;
+			margin-top:80px;
+			@media screen and (max-width: 520px) {
+				font-size: 24px;
+				margin-top: 30px;
+			}
+		}
+		h1 {
+			font-size: 46px;
+			margin-top:40%;
+			@media screen and (max-width: 520px) {
+				font-size: 26px;
+			}
+		}
+		p {
+			font-size:26px;
+			line-height: 1.20;
+			@media screen and (max-width: 520px) {
+				font-size: 18px;
+			}
+		}
+	}
+	.game-won, .game-over {
+		background-color: fade(desaturate(@basecolor, 15%), 70%) !important;
+	}
+}
+
+form {
+	margin-top: 4em;
+	@media screen and (max-width: 520px) {
+		margin-top: 0.2em;
+	}
+}
+
+input.form-control {
+	display:block;
+	margin:auto !important;
+}
+
+button.pure-button {
+	margin-top: 10px;
+}
+
+.lower {
+	margin-top: 10px !important;
+}
+
+
+//Info texts
+
+.info {
+	font-size: 12px;
+}
+
+.info2 {
+	text-align: center;
+}
+
+// Social sharing
+
+.share {
+	display: block;
+	width:210px;
+	margin: auto;
+	strong.important {
+		font-size: 16px;
+		color: fade(@fontcolor, 50%);
+	}
+}
+
+.fb-share-button {
+	position: relative;
+	top: -6px;
+}
+
+
+//GRID STYLING
+
+.game-container {
+	background-color: @bgcolor;
+	margin-top: 10px;
+}
+
+.tile {
+	&.tile-2 .tile-inner {
+		.tile-lighten(50%) !important;
+	}
+	&.tile-4 .tile-inner {
+		.tile-lighten(40%) !important;
+	}
+	&.tile-8 .tile-inner {
+		.tile-lighten(30%) !important;
+		color: inherit;
+	}
+	&.tile-16 .tile-inner {
+		.tile-lighten(20%) !important;
+	}
+	&.tile-32 .tile-inner {
+		.tile-lighten(10%) !important;
+	}
+	&.tile-64 .tile-inner {
+		.tile-darken(0%) !important;
+	}
+	&.tile-128 .tile-inner {
+		.tile-darken(3%) !important;
+		box-shadow: none !important;
+	}
+	&.tile-256 .tile-inner {
+		.tile-darken(6%) !important;
+		box-shadow: none !important;
+	}
+	&.tile-512 .tile-inner {
+		.tile-darken-sat(9%) !important;
+		box-shadow: none !important;
+	}
+	&.tile-1024 .tile-inner {
+		background-color: saturate(@basecolor, 20%);
+		.glow;		
+	}
+
+}

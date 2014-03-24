@@ -57,7 +57,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   // We can't use classlist because it somehow glitches when replacing classes
   var classes = ["tile", "tile-" + tile.value, positionClass];
 
-  if (tile.value > 2048) classes.push("tile-super");
+  if (tile.value > 1024) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
 
@@ -124,18 +124,19 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
   this.bestContainer.textContent = bestScore;
 };
 
-var lockville = 'Na menj <a href="http://index.hu" target="_blank">INDEXet</a> olvasni Szoszo!'
+var lockville = '<h3>Gratulálunk!</h3><p>Add meg az e-mail címed, hogy elküldhessük neked a kuponod!</p><form method="post" action="#" role="form" class="pure-form pure-form-stacked"><input type="email" placeholder="E-mail cím..." class="form-control"><button type="submit" class="pure-button pure-button-primary">Küldd a kupont!</button></form>';
 //$(document).ready(function(){
 //  $('p').append('Kattints <a href="http://index.hu" target="_blank">ide</a>')
 //})
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? lockville : "Game over!";
+  var message = won ? lockville : "<h1>Vége a játéknak!</h1>";
 
   this.messageContainer.classList.add(type);
  // this.messageContainer.getElementsByTagName("p")[0].textContent = message;
- $('.message').append(message);
+  $('.message').empty();
+  $('.message').append(message);
 };
 
 HTMLActuator.prototype.clearMessage = function () {

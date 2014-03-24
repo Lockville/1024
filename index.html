@@ -2,34 +2,54 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>32</title>
-
-  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <title>Lockville 1024</title>
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
-
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta property="og:title" content="Lockville 1024 nyereményjáték" />
+  <meta property="og:image" content="ogimg.jpg" />
+  <meta property="og:description" content="Juss el 1024-ig és jutalmad egy Lockville ajándék kupon!" />
+  <link href="style/styles.css" rel="stylesheet" type="text/css">
+  <!-- LESS stylesheet
+  <link href="style/custom.less" rel="stylesheet/less" type="text/css">
+  <script>
+  less = {
+    env: "development",
+    async: false,
+    fileAsync: false,
+    poll: 1000,
+    functions: {},
+    dumpLineNumbers: "comments",
+    relativeUrls: false,
+    rootpath: ""
+  };
+</script>
+<script src="js/less.js"></script> -->
 </head>
 <body>
   <div class="container">
     <div class="heading">
-      <h1 class="title">32</h1>
+      <h1 class="title">Lockville <small>1024</small></h1>
+      <p class="game-intro">
+        Add össze a számokat, hogy eljuss <br class="visible-xs"/><strong>1024-ig!</strong><br/>
+        Ha sikerül, egy <strong>ingyenes</strong> Lockville ajándék kupon a jutalmad!
+      </p>
       <div class="scores-container">
         <div class="score-container">0</div>
         <div class="best-container">0</div>
       </div>
     </div>
-    <p class="game-intro">Join the numbers and get to the <strong>32 tile!</strong></p>
+    
 
     <div class="game-container">
       <div class="game-message">
-        <p class="message"></p>
+        <div class="message"></div>
         <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
+	        <a class="keep-playing-button pure-button pure-button-primary">Játssz tovább</a>
+          <a class="retry-button pure-button pure-button-primary">Próbáld újra</a>
         </div>
       </div>
 
@@ -66,15 +86,24 @@
     </div>
 
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      <strong class="important">Így játssz:</strong> Használd a <strong>nyíl billentyűket</strong> a téglák mozgatásához. Amikor két egyforma értékű tégla összeér, egybeolvadnak, az értékük pedig <strong>összeadódik!</strong>
     </p>
     <hr>
-    <p>
-    <strong class="important">Note:</strong> This site is the official version of 2048. You can play it on your phone via <a href="http://git.io/2048">http://git.io/2048.</a> All other apps or sites are derivatives or fakes, and should be used with caution.
+    <div class="share">
+    <p><strong class="important">Oszd meg barátaiddal!</strong></p>
+    <div class="fb-share-button" data-href="https://lockville.hu/1024" data-type="button"></div> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lockville.hu/1024" data-count="none">Tweet</a> <div class="g-plus" data-action="share" data-annotation="none" data-href="http://lockville.hu/1024"></div>
+    </div>
+
+    <hr>
+    <p class="info">
+    <strong class="important">Megjegyzés:</strong> A nyeremény kupon a Lockville Kiszabadulós Kalandjáték pályájára érvényes. Egy csoportban egy kupon használható fel. Mielőtt megadod az e-mail címed, olvasd el az <a href="http://lockville.hu/hu/adatkezeles.html" target="_blank" title="Adatkezelési nyilatkozat">adatkezelési nyilatkozatunkat</a>!
+    </p>
+    <p class="info">
+      A játék alapjául Gabriele Cirulli 2048 nevű játéka szolgált. Nézd meg az eredeti játékot a <a href="http://hit.io/2048" target="_blank">git.io/2048</a> oldalon.
     </p>
     <hr>
-    <p>
-    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    <p class="info2">
+    <a href="http://lockville.hu" target="_blank">www.lockville.hu</a>
     </p>
   </div>
 
@@ -87,5 +116,30 @@
   <script src="js/local_score_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
+
+<!--Facebook script -->
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--Twitter script -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+<!-- G+ share script -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'hu'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 </body>
 </html>

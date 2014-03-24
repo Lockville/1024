@@ -93,10 +93,10 @@ h1.title {
     animation-fill-mode: both; }
 
 .score-container:after {
-  content: "Score"; }
+  content: "Pont"; }
 
 .best-container:after {
-  content: "Best"; }
+  content: "Legjobb"; }
 
 p {
   margin-top: 0;
@@ -180,20 +180,10 @@ hr {
       font-weight: bold;
       height: 60px;
       line-height: 60px;
-      margin-top: 100px; }
+      margin-top: 0px; }
     .game-container .game-message .lower {
       display: block;
-      margin-top: 200px; }
-    .game-container .game-message a {
-      display: inline-block;
-      background: #8f7a66;
-      border-radius: 3px;
-      padding: 0 20px;
-      text-decoration: none;
-      color: #f9f6f2;
-      height: 40px;
-      line-height: 42px;
-      margin-left: 9px; }
+      margin-top: 0px; }
       .game-container .game-message p a {
         background:transparent;
         text-decoration: underline;
@@ -556,19 +546,16 @@ hr {
         font-weight: bold;
         height: 60px;
         line-height: 60px;
-        margin-top: 222px; }
+        margin-top: 0px; }
       .game-container .game-message .lower {
         display: block;
-        margin-top: 200px; }
+        margin-top: 0px; }
       .game-container .game-message a {
         display: inline-block;
-        background: #8f7a66;
+        /*background: #8f7a66;*/
         border-radius: 3px;
-        padding: 0 20px;
         text-decoration: none;
         color: #f9f6f2;
-        height: 40px;
-        line-height: 42px;
         margin-left: 9px; }
         .game-container .game-message a.keep-playing-button {
           display: none; }
@@ -682,10 +669,5 @@ hr {
   .tile .tile-inner {
     font-size: 35px; }
 
-  .game-message p {
-    font-size: 30px !important;
-    height: 30px !important;
-    line-height: 30px !important;
-    margin-top: 90px !important; }
   .game-message .lower {
-    margin-top: 100px !important; } }
+    margin-top: 0px; } }
