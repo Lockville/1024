@@ -124,7 +124,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
   this.bestContainer.textContent = bestScore;
 };
 
-var lockville = 'Na menj <a href="http://index.hu" target="_blank">INDEXet</a> olvasni Szoszo!'
+var lockville = 'Gratulálunk!<br/>Add meg az e-mail címed, hogy elküldhessük neked a kuponod!<br/><form method="post" action="#" role="form"><input type="email" placeholder="E-mail cím..." class="form-control"><button type="submit" class="btn button">Küldd a kupont!</button></form>';
 //$(document).ready(function(){
 //  $('p').append('Kattints <a href="http://index.hu" target="_blank">ide</a>')
 //})
