@@ -51,6 +51,7 @@ button {
 .pure-button {
 	font-size: 18px;
 	.font;
+	font-weight: bold;
 }
 
 .pure-button-primary {
@@ -101,8 +102,21 @@ small {
 //Message
 
 .game-container {
-	p.message {
-		font-size:18px;
+	.message {
+		h3 {
+			font-size: 32px;
+			margin-top:30px;
+			@media screen and (max-width: 520px) {
+				font-size: 24px;
+			}
+		}
+		p {
+			font-size:26px;
+			line-height: 1.20;
+			@media screen and (max-width: 520px) {
+				font-size: 18px;
+			}
+		}
 	}
 	.game-won, .game-over {
 		background-color: fade(desaturate(@basecolor, 15%), 70%) !important;
@@ -112,9 +126,16 @@ small {
 input.form-control {
 	display:block;
 	margin:auto !important;
+	margin-top: 1em;
 }
 
+button.pure-button {
+	margin-top: 10px;
+}
 
+.lower {
+	margin-top: 10px !important;
+}
 
 
 
