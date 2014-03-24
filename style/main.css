@@ -184,16 +184,6 @@ hr {
     .game-container .game-message .lower {
       display: block;
       margin-top: 200px; }
-    .game-container .game-message a {
-      display: inline-block;
-      background: #8f7a66;
-      border-radius: 3px;
-      padding: 0 20px;
-      text-decoration: none;
-      color: #f9f6f2;
-      height: 40px;
-      line-height: 42px;
-      margin-left: 9px; }
       .game-container .game-message p a {
         background:transparent;
         text-decoration: underline;

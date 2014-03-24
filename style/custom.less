@@ -1,3 +1,4 @@
+@import url('fonts/clear-sans.css');
 @import "../style/main.css";
 @import "../style/buttons.css";
 @import "../style/forms.css";
@@ -15,6 +16,9 @@
 
 // MIXINS
 
+.font {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif !important;
+}
 
 // Glow mixin
 
@@ -95,10 +99,30 @@ html, body {
 
 }
 
+// PURE CSS STYLE OVERRIDES
+
+button {
+	font: inherit;
+}
+
+.pure-button {
+	font-size: 18px;
+	.font;
+}
+
+
 //MESSAGE
 
 .game-container {
+	p.message {
+		font-size:16px;
+	}
 	.game-won, .game-over {
 		background-color: fade(@basecolor, 40%) !important;
 	}
+}
+
+input.form-control {
+	display:block;
+	margin:auto !important;
 }
