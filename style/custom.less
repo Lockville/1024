@@ -39,6 +39,30 @@
 	background-color: saturate(darken(@basecolor, @increment), @increment);
 }
 
+
+
+
+// PURE CSS STYLE OVERRIDES
+
+button {
+	font: inherit;
+}
+
+.pure-button {
+	font-size: 18px;
+	.font;
+}
+
+.pure-button-primary {
+	background-color: @bgcolor !important;
+	&:hover, &:focus, &:active {
+		background-color: darken(@bgcolor, 2%) !important;
+	}
+}
+
+
+
+
 //GENERAL STYLING
 
 html, body {
@@ -46,18 +70,60 @@ html, body {
 	background-color: lighten(@bgcolor,68%);
 }
 
+.visible-xs {
+	display:none;
+	@media screen and (max-width: 520px) {
+		display: inline;
+	}
+}
 
-//SCORES STYLING
+
+
+//TEXT & HEADER STYLING
+
+//Header
+
+h1.title {
+	float: none;
+	text-align: center;
+}
+small {
+	font-size: 75%;
+}
+
+
+//Scores
 
 .scores-container div {
 	background-color: @bgcolor;
 }
+
+//Message
+
+.game-container {
+	p.message {
+		font-size:18px;
+	}
+	.game-won, .game-over {
+		background-color: fade(desaturate(@basecolor, 15%), 70%) !important;
+	}
+}
+
+input.form-control {
+	display:block;
+	margin:auto !important;
+}
+
+
+
+
 
 
 //GRID STYLING
 
 .game-container {
 	background-color: @bgcolor;
+	margin-top: 10px;
 }
 
 .tile {
@@ -97,39 +163,4 @@ html, body {
 		.glow;		
 	}
 
-}
-
-// PURE CSS STYLE OVERRIDES
-
-button {
-	font: inherit;
-}
-
-.pure-button {
-	font-size: 18px;
-	.font;
-}
-
-.pure-button-primary {
-	background-color: @bgcolor !important;
-	&:hover, &:focus, &:active {
-		background-color: darken(@bgcolor, 2%) !important;
-	}
-}
-
-
-//MESSAGE
-
-.game-container {
-	p.message {
-		font-size:16px;
-	}
-	.game-won, .game-over {
-		background-color: fade(@basecolor, 70%) !important;
-	}
-}
-
-input.form-control {
-	display:block;
-	margin:auto !important;
 }
