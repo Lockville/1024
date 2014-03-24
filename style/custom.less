@@ -20,13 +20,10 @@
 	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif !important;
 }
 
-// Glow mixin
-
 .glow(@color: @basecolor-lighten; @x: 0px; @y: 0px; @rad: 30px; @size: 3px) {
 	box-shadow: @x @y @rad @size @color;
 }
 
-// Tile backgrounds
 .tile-lighten(@increment) {
 	background-color: lighten(@basecolor, @increment);
 }
@@ -84,7 +81,7 @@ html, body {
 
 
 
-//TEXT & HEADER STYLING
+//STYLING PAGE ELEMENTS
 
 //Header
 
@@ -155,12 +152,32 @@ button.pure-button {
 	margin-top: 10px !important;
 }
 
+
+//Info texts
+
 .info {
 	font-size: 12px;
 }
 
 .info2 {
 	text-align: center;
+}
+
+// Social sharing
+
+.share {
+	display: block;
+	width:210px;
+	margin: auto;
+	strong.important {
+		font-size: 16px;
+		color: fade(@fontcolor, 50%);
+	}
+}
+
+.fb-share-button {
+	position: relative;
+	top: -6px;
 }
 
 

@@ -2,13 +2,16 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>32</title>
+  <title>Lockville 1024</title>
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta property="og:title" content="Lockville 1024 nyereményjáték" />
+  <meta property="og:image" content="ogimage.jpg" />
+  <meta property="og:description" content="Juss el 1024-ig és jutalmad egy Lockville ajándék kupon!" />
   <link href="style/custom.less" rel="stylesheet/less" type="text/css">
   <script>
   less = {
@@ -85,6 +88,12 @@
       <strong class="important">Így játssz:</strong> Használd a <strong>nyíl billentyűket</strong> a téglák mozgatásához. Amikor két egyforma értékű tégla összeér, egybeolvadnak, az értékük pedig <strong>összeadódik!</strong>
     </p>
     <hr>
+    <div class="share">
+    <p><strong class="important">Osszd meg barátaiddal!</strong></p>
+    <div class="fb-share-button" data-href="https://lockville.hu/1024" data-type="button"></div> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lockville.hu/1024" data-count="none">Tweet</a> <div class="g-plus" data-action="share" data-annotation="none" data-href="http://lockville.hu/1024"></div>
+    </div>
+
+    <hr>
     <p class="info">
     <strong class="important">Megjegyzés:</strong> A nyeremény kupon a Lockville Kiszabadulós Kalandjáték pályájára érvényes. Egy csoportban egy kupon használható fel. Mielőtt megadod az e-mail címed, olvasd el az <a href="http://lockville.hu/hu/adatkezeles.html" target="_blank" title="Adatkezelési nyilatkozat">adatkezelési nyilatkozatunkat</a>!
     </p>
@@ -106,5 +115,30 @@
   <script src="js/local_score_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
+
+<!--Facebook script -->
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--Twitter script -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+<!-- G+ share script -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'hu'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 </body>
 </html>
