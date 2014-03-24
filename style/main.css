@@ -93,10 +93,10 @@ h1.title {
     animation-fill-mode: both; }
 
 .score-container:after {
-  content: "Score"; }
+  content: "Pont"; }
 
 .best-container:after {
-  content: "Best"; }
+  content: "Legjobb"; }
 
 p {
   margin-top: 0;
@@ -554,11 +554,8 @@ hr {
         display: inline-block;
         /*background: #8f7a66;*/
         border-radius: 3px;
-        padding: 0 20px;
         text-decoration: none;
         color: #f9f6f2;
-        height: 40px;
-        line-height: 42px;
         margin-left: 9px; }
         .game-container .game-message a.keep-playing-button {
           display: none; }

@@ -131,7 +131,7 @@ var lockville = '<h3>Gratulálunk!</h3><p>Add meg az e-mail címed, hogy elküld
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? lockville : "<h1>Game over!</h1>";
+  var message = won ? lockville : "<h1>Vége a játéknak!</h1>";
 
   this.messageContainer.classList.add(type);
  // this.messageContainer.getElementsByTagName("p")[0].textContent = message;
