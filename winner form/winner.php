@@ -2,6 +2,13 @@
 
 $rand = rand(10000000,99999999); //random number generator
 
+$myFile = "numbers.txt";	//append random number to file (with line break)
+$fh = fopen($myFile, 'a') or die("can't open file");
+$stringData = "$rand" . PHP_EOL;
+fwrite($fh, $stringData);
+fclose($fh);
+
+
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 $headers .= 'From: Lockville.hu <info@lockville.hu>' . "\r\n";
