@@ -131,11 +131,12 @@ var lockville = 'Gratulálunk!<br/>Add meg az e-mail címed, hogy elküldhessük
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? lockville : "Game over!";
+  var message = won ? lockville : "<h1>Game over!</h1>";
 
   this.messageContainer.classList.add(type);
  // this.messageContainer.getElementsByTagName("p")[0].textContent = message;
- $('.message').append(message);
+  $('.message').empty();
+  $('.message').append(message);
 };
 
 HTMLActuator.prototype.clearMessage = function () {
