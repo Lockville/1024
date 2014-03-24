@@ -26,7 +26,7 @@ $mail_status = mail("$to","Nyeremény",$message,$headers);
 
 if ($mail_status) { ?>
 	<script language="javascript" type="text/javascript">
-		window.location = '2048success.html';
+		window.location = 'success.html';
 	</script>
 <?php
 }
