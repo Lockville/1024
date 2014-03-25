@@ -137,6 +137,9 @@ HTMLActuator.prototype.message = function (won) {
  // this.messageContainer.getElementsByTagName("p")[0].textContent = message;
   $('.message').empty();
   $('.message').append(message);
+  if (won = "game-over") {
+    $('.winsocial').css('display', 'none');
+  }
 };
 
 HTMLActuator.prototype.clearMessage = function () {
@@ -144,3 +147,8 @@ HTMLActuator.prototype.clearMessage = function () {
   this.messageContainer.classList.remove("game-won");
   this.messageContainer.classList.remove("game-over");
 };
+
+//Display win social sharing
+$('.dropdown').click(function(){
+  $('.winsocial').toggle();
+})
