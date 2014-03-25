@@ -137,8 +137,8 @@ HTMLActuator.prototype.message = function (won) {
  // this.messageContainer.getElementsByTagName("p")[0].textContent = message;
   $('.message').empty();
   $('.message').append(message);
-  if (won = "game-over") {
-    $('.winsocial').css('display', 'none');
+  if (type === "game-over") {
+    $('.dropdown').css('display', 'none');
   }
 };
 
