@@ -27,7 +27,7 @@ $message = '
       <h1 style="margin-top:0.3em">Lockville nyeremény kupon</h1>
       <h2>A kupon sorszáma: '.$rand.'</h2>
       <p>
-       Ez a kupon <strong>ingyenes</strong> részvételt biztosít <strong>1 fő</strong> részére a Lockville Kiszabadulós Kalandjátékban.
+       Ez a kupon <strong>félárú</strong> részvételt biztosít <strong>1 csoport</strong> részére a Lockville Kiszabadulós Kalandjátékban.
       </p>
     
     
