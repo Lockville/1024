@@ -3,7 +3,7 @@ $to = $_POST["to"];
 
 $rand = rand(10000000,99999999); //random number generator (8 digits)
 
-$rand = 'LV-'.$rand; //Add prefix to stop browsers from seeing number as phone no.
+$rand = 'KU-'.$rand; //Add prefix to stop browsers from seeing number as phone no.
 
 $myFile = "srkszq1.txt";	//append random number to file (with line break)
 $fh = fopen($myFile, 'a') or die("can't open file");
