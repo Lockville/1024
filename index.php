@@ -7,22 +7,8 @@
   <meta property="og:description" content="Juss el 1024-ig és jutalmad egy Lockville ajándék kupon!" />
 </head>
 <body>
-<?php 
-$redirect = rand(1,2); //Generate random number
-
-if ($redirect == 1) { ?>
-	<script language="javascript" type="text/javascript">
-		window.location = 'nyeremeny/index.html';
-	</script> <?php
-}
-if ($redirect == 2) { ?>
-	<script language="javascript" type="text/javascript">
-		window.location = 'kupon/index.html';
-	</script> <?php
-}
-
-
-?>
-
+<script language="javascript" type="text/javascript">
+		window.location = 'http://lockville.hu/hu';
+	</script>
 </body>
 </html>
